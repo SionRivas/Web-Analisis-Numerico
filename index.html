@@ -6,8 +6,12 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Analisis Numérico</title>
     <link rel="stylesheet" href="styles.css">
+
+    <!--
     <link rel="stylesheet" href="https://pyscript.net/releases/2024.3.1/core.css">
     <script type="module" src="https://pyscript.net/releases/2024.3.1/core.js"></script>
+    -->
+
 </head>
 
 <body>
@@ -25,19 +29,24 @@
 
         </div>
         <div class="panel_metodos">
-            <div class="metodo grafico">
-                <h2>Método Gráfico</h2>
-                <p>Este método consiste en graficar la función y encontrar la intersección con el eje x.</p>
-            </div>
-            <div class="metodo iterativos">
-                <h1>Métodos Iterativos</h1>
-                <p>Estos métodos consisten en encontrar la raíz de una función mediante iteraciones.</p>
-            </div>
-
-            <div class="metodo cerrados">
-                <h1>Métodos Cerrados</h1>
-                <p>Estos métodos consisten en encontrar la raíz de una función mediante un intervalo.</p>
-            </div>
+            <a href="" class="metodo grafico">
+                <div class="">
+                    <h2>Método Gráfico</h2>
+                    <p>Este método consiste en graficar la función y encontrar la intersección con el eje x.</p>
+                </div>
+            </a>
+            <a href="" class="metodo iterativos">
+                <div>
+                    <h1>Métodos Iterativos</h1>
+                    <p>Estos métodos consisten en encontrar la raíz de una función mediante iteraciones.</p>
+                </div>
+            </a>
+            <a href="" class="metodo cerrados">
+                <div>
+                    <h1>Métodos Cerrados</h1>
+                    <p>Estos métodos consisten en encontrar la raíz de una función mediante un intervalo.</p>
+                </div>
+            </a>
 
         </div>
         <dir class="información">
@@ -46,8 +55,16 @@
         </dir>
     </div>
 
+    <div style="
+    width: 100px;
+    height: 100px;
+    background: rgb(255, 92, 92);
+    position: absolute;
+    z-index: -999;
+    "></div>
 
-    <script type="py" src="./main.py" config="./pyscript.json"></script>
+
+    <!-- <script type="py" src="./main.py" config="./pyscript.json"></script>-->
 </body>
 
 </html>

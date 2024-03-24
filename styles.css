@@ -17,7 +17,7 @@ html {
     height: 100%;
     /* Add your background pattern here */
     background-color: #ebebeb;
-    background-image: radial-gradient(rgba(0, 0, 0, 0.3) 2px, transparent 0);
+    background-image: radial-gradient(rgba(146, 146, 146, 0.3) 2px, transparent 0);
     background-size: 30px 30px;
     background-position: -5px -5px
   }
@@ -58,6 +58,7 @@ p{
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 1rem;
+    align-items: unset;
 }
 
 .grafico{
@@ -97,7 +98,17 @@ body{
 .metodo{
     padding: 1rem;
     border-radius: 1rem;
-    background: rgba(255, 255, 255, 0.149);
+    background: rgba(221, 221, 221, 0.149);
     backdrop-filter: blur(7px);
+    text-decoration: none;
+    transition: all 0.5s;
+    border: 3px solid rgba(255, 255, 255, 0.149);
+}
+
+
+.metodo:hover{
+    margin: -1rem;
+    text-wrap: nowrap;
     
+    border: 3px solid rgba(255, 255, 255, 0.5);
 }
