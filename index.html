@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Analisis Numérico</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <!--
     <link rel="stylesheet" href="https://pyscript.net/releases/2024.3.1/core.css">
@@ -20,51 +21,230 @@
 
     <div class="content">
         <div class="descripcion">
-
-            <h2>Métodos</h2>
             <p>En este sitio web encontrarás información sobre los métodos numéricos más utilizados para encontrar
                 raíces de
                 funciones.</p>
-
-
         </div>
         <div class="panel_metodos">
-            <a href="" class="metodo grafico">
+            <a href="" class="metodo grafico" style="--bgcolor: rgba(255, 255, 255, 0.144);">
                 <div class="">
-                    <h2>Método Gráfico</h2>
+                    <h2>Método <span class="textGradient1">Gráfico</span></h2>
+                    <img src="img/grafica.png" alt="" width="300px">
                     <p>Este método consiste en graficar la función y encontrar la intersección con el eje x.</p>
                 </div>
             </a>
-            <a href="" class="metodo iterativos">
-                <div>
-                    <h1>Métodos Iterativos</h1>
-                    <p>Estos métodos consisten en encontrar la raíz de una función mediante iteraciones.</p>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h2>Métodos <span class="textGradient2">Iterativos</span></h2>
+                        <p>Estos métodos consisten en encontrar la raíz de una función mediante cálculos iterativos.</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <div class="mep" onclick="showDialog('cerrados')">
+                            <h2>Cerrados</h2>
+                            <i class="icon bi bi-box-arrow-in-right"></i>
+                        </div>
+                        <div class="mep" onclick="showDialog('polinomicos')"">
+                            <h2>Polinimocos</h2>
+                            <i class=" icon bi bi-box-arrow-in-right"></i>
+                        </div>
+                        <div class="mep">
+                            <h2>Abiertos</h2>
+                            <i class="icon bi bi-box-arrow-in-right"></i>
+                        </div>
+                    </div>
                 </div>
-            </a>
-            <a href="" class="metodo cerrados">
-                <div>
-                    <h1>Métodos Cerrados</h1>
-                    <p>Estos métodos consisten en encontrar la raíz de una función mediante un intervalo.</p>
+            </div>
+
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h2>Métodos <span class="textGradient3">Directos</span></h2>
+                        <p>Estos métodos consisten en encontrar la raíz de una función mediante cálculos directos.</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <div class="mep">
+                            <h2>Polinimocos de 1º y 2º grado</h2>
+                            <i class="icon bi bi-box-arrow-in-right"></i>
+                        </div>
+                        <div class="mep">
+                            <h2>Polinimocos mayor de 3º</h2>
+                            <i class="icon bi bi-box-arrow-in-right"></i>
+                        </div>
+                    </div>
                 </div>
-            </a>
+            </div>
 
         </div>
         <dir class="información">
-            <div>!</div>
-            <div>⚙️</div>
+            <div class="metodo" style="--bgcolor: rgba(32, 32, 32, 0.267);">!</div>
+            <div class="metodo" style="--bgcolor: rgba(13, 197, 7, 0.521);">⚙️</div>
         </dir>
     </div>
 
-    <div style="
-    width: 100px;
-    height: 100px;
-    background: rgb(255, 92, 92);
-    position: absolute;
-    z-index: -999;
-    "></div>
+    <a href="" class="metodo cerrados">
+
+    </a>
 
 
     <!-- <script type="py" src="./main.py" config="./pyscript.json"></script>-->
+
+
+
+
+    <style>
+        /* Estilos para la ventana modal */
+        .modal {
+            display: none;
+            /* Por defecto, la ventana modal está oculta */
+            position: fixed;
+            /* Fija la ventana modal en la pantalla */
+            z-index: 1;
+            /* Asegura que la ventana modal esté encima de todo */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            /* Permite desplazarse si la ventana modal es demasiado grande */
+            background-color: rgba(0, 0, 0, 0.5);
+            /* Fondo oscuro semi-transparente */
+        }
+
+        /* Estilos para el contenido de la ventana modal */
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            /* Centra vertical y horizontalmente */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 600px;
+            /* Ancho máximo */
+        }
+
+        /* Estilos para el botón de cierre de la ventana modal */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+
+
+    <div id="cerrados" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="hideDialog('cerrados')">&times;</span>
+            <p>Este es el contenido de la ventana modal. Puedes colocar aquí lo que desees mostrar.</p>
+        </div>
+    </div>
+    <div id="polinomicos" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="hideDialog('polinomicos')">&times;</span>
+            <p>Este es el contenido de la ventana modal. Puedes colocar aquí lo que desees mostrar.</p>
+        </div>
+
+    </div>
+
+    <script>
+
+        function showDialog(id) {
+            var modal = document.getElementById(id);
+            modal.style.display = 'block';
+        }
+
+        function hideDialog(id) {
+            var modal = document.getElementById(id);
+            modal.style.display = 'none';
+        }
+    </script>
+    <script>
+        // init
+        var maxx = document.body.clientWidth;
+        var maxy = document.body.clientHeight;
+        var halfx = maxx / 2;
+        var halfy = maxy / 2;
+        var canvas = document.createElement("canvas");
+        document.body.appendChild(canvas);
+        canvas.width = maxx;
+        canvas.height = maxy;
+        var context = canvas.getContext("2d");
+        var dotCount = 200;
+        var dots = [];
+        // create dots
+        for (var i = 0; i < dotCount; i++) {
+            dots.push(new dot());
+        }
+
+        // dots animation
+        function render() {
+            function cleanCanvas() {
+                context.clearRect(0, 0, maxx, maxy);
+            }
+
+            // Call the cleanCanvas function before rendering the dots
+            cleanCanvas();
+            context.fillStyle = "transparent";
+            context.fillRect(0, 0, maxx, maxy);
+            for (var i = 0; i < dotCount; i++) {
+                dots[i].draw();
+                dots[i].move();
+            }
+            requestAnimationFrame(render);
+        }
+
+        // dots class
+        // @constructor
+        function dot() {
+
+            this.rad_x = 2 * Math.random() * halfx + 1;
+            this.rad_y = 1.2 * Math.random() * halfy + 1;
+            this.alpha = Math.random() * 360 + 1;
+            this.speed = Math.random() * 100 < 50 ? 1 : -1;
+            this.speed *= 0.05;
+            this.size = Math.random() * 5 + 2;
+            this.color = Math.floor(Math.random() * 256);
+
+        }
+
+        // drawing dot
+        dot.prototype.draw = function () {
+
+            // calc polar coord to decart
+            var dx = halfx + this.rad_x * Math.cos(this.alpha / 180 * Math.PI);
+            var dy = halfy + this.rad_y * Math.sin(this.alpha / 180 * Math.PI);
+            // set color
+            context.fillStyle = "rgb(104, 164, 255," + Math.floor(Math.random() * 256) + ")";
+            // draw dot
+            context.fillRect(dx, dy, this.size, this.size);
+
+        };
+
+        // calc new position in polar coord
+        dot.prototype.move = function () {
+
+            this.alpha += this.speed;
+            // change color
+            if (Math.random() * 100 < 50) {
+                this.color += 1;
+            } else {
+                this.color -= 1;
+            }
+
+        };
+
+        // start animation
+        render();
+    </script>
+
 </body>
 
 </html>

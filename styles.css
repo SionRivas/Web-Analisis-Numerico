@@ -20,9 +20,9 @@ html {
     background-image: radial-gradient(rgba(146, 146, 146, 0.3) 2px, transparent 0);
     background-size: 30px 30px;
     background-position: -5px -5px
-  }
+}
 
-.text_hero{
+.text_hero {
     text-align: center;
     margin-top: 20px;
     font-family: var(--primary-font);
@@ -30,21 +30,23 @@ html {
     font-size: 4em;
     color: var(--var-primary);
 }
-h2{
+
+h2 {
     font-family: var(--secondary-font);
     font-weight: 600;
     font-size: 2em;
     color: var(--var-primary);
 
 }
-p{
+
+p {
     font-family: var(--third-font);
     font-weight: 500;
     font-size: 1.2em;
     color: var(--var-secondary);
 }
 
-.bg-gradient1{
+.bg-gradient1 {
     background: linear-gradient(135deg, #2a5ffe 0%, #3ac7dc 100%);
     color: white;
     padding: 0.2rem 1rem;
@@ -52,7 +54,7 @@ p{
 }
 
 
-.panel_metodos{
+.panel_metodos {
     height: 50vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -61,25 +63,28 @@ p{
     align-items: unset;
 }
 
-.grafico{
-    grid-row: span 2
+.grafico {
+    grid-row: span 2;
 }
 
-.content{
+.content {
     display: flex;
     flex-direction: column;
     width: 80vw;
     gap: 1rem;
 }
 
-.información{
+.información {
     display: flex;
     width: 100%;
     flex-direction: row-reverse;
+    gap: 1rem;
 
 }
-.información div{
-    background: lightblue;
+
+.información div {
+    width: 30px;
+    height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -87,28 +92,140 @@ p{
     padding: 1rem;
 }
 
-body{
+body {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 1rem;
 }
+body,
+canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+canvas{
+    z-index: -99;
+}
+.textGradient1 {
+    font-family: var(--primary-font);
+    font-weight: 900;
+    background: linear-gradient(135deg, #ff651d 0%, #dad61e 100%);
+    background-clip: text;
+    color: transparent;
+}
 
-.metodo{
+.textGradient2 {
+    font-family: var(--primary-font);
+    font-weight: 900;
+    background: linear-gradient(135deg, #28e431 0%, #006e65 100%);
+    background-clip: text;
+    color: transparent;
+}
+
+.textGradient3 {
+    font-family: var(--primary-font);
+    font-weight: 900;
+    background: linear-gradient(135deg, #a442ff 0%, #234dbe 100%);
+    background-clip: text;
+    color: transparent;
+}
+
+.metodo {
     padding: 1rem;
     border-radius: 1rem;
-    background: rgba(221, 221, 221, 0.149);
+    background: var(--bgcolor);
     backdrop-filter: blur(7px);
     text-decoration: none;
     transition: all 0.5s;
     border: 3px solid rgba(255, 255, 255, 0.149);
 }
 
+.mep {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-self: center;
+    transition: all 0.5s;
+    background-clip: text;
+}
 
-.metodo:hover{
-    margin: -1rem;
-    text-wrap: nowrap;
-    
+.mep:hover {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #ff1d1d 0%, #951eda 100%);
+    background-clip: text;
+    color: transparent !important;
+}
+.mep:hover h2{
+    color: transparent !important;
+}
+
+.mep:hover>.mep:not(:hover) {
+    background-color: red;
+}
+
+.mep .icon {
+    font-weight: 900;
+    font-size: 2.5em;
+
+}
+
+
+.metodo:hover {
+    transform: scale(1.1);
+    z-index: 9999;
+
     border: 3px solid rgba(255, 255, 255, 0.5);
+}
+
+
+
+.flip-card {
+    perspective: 1000px;
+    font-family: sans-serif;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg) scale(1.1);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: calc(100% - 2.5rem);
+    height: calc(100% - 2.5rem);
+    backface-visibility: hidden;
+}
+
+.flip-card-front,
+.flip-card-back {
+    backdrop-filter: blur(7px);
+    border: 3px solid rgba(255, 255, 255, 0.149);
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.flip-card-front:hover,
+.flip-card-back:hover {
+    border: 3px solid rgba(255, 255, 255, 0.5);
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
