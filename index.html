@@ -26,7 +26,9 @@
                 funciones.</p>
         </div>
         <div class="panel_metodos">
-            <a href="" class="metodo grafico" style="--bgcolor: rgba(255, 255, 255, 0.144);">
+            <a href="" class="metodo grafico" style="
+                --bgcolor: rgba(255, 255, 255, 0.144);
+                --gdcolor:rgba(140, 0, 255, 0.315);">
                 <div class="">
                     <h2>Método <span class="textGradient1">Gráfico</span></h2>
                     <img src="img/grafica.png" alt="" width="300px">
@@ -48,7 +50,7 @@
                             <h2>Polinimocos</h2>
                             <i class=" icon bi bi-box-arrow-in-right"></i>
                         </div>
-                        <div class="mep">
+                        <div class="mep" onclick="showDialog('abiertos')">
                             <h2>Abiertos</h2>
                             <i class="icon bi bi-box-arrow-in-right"></i>
                         </div>
@@ -63,11 +65,11 @@
                         <p>Estos métodos consisten en encontrar la raíz de una función mediante cálculos directos.</p>
                     </div>
                     <div class="flip-card-back">
-                        <div class="mep">
+                        <div class="mep" onclick="showDialog('Polinimocos12')">
                             <h2>Polinimocos de 1º y 2º grado</h2>
                             <i class="icon bi bi-box-arrow-in-right"></i>
                         </div>
-                        <div class="mep">
+                        <div class="mep" onclick="showDialog('Polinimocos3+')">
                             <h2>Polinimocos mayor de 3º</h2>
                             <i class="icon bi bi-box-arrow-in-right"></i>
                         </div>
@@ -77,82 +79,168 @@
 
         </div>
         <dir class="información">
-            <div class="metodo" style="--bgcolor: rgba(32, 32, 32, 0.267);">!</div>
-            <div class="metodo" style="--bgcolor: rgba(13, 197, 7, 0.521);">⚙️</div>
+            <div class="metodo" style="
+                --bgcolor: rgba(130, 0, 252, 0.541);
+                font-size: xx-large;
+                color: rgba(255, 255, 255, 0.918);
+                " onclick="showDialog('work')">
+                <i class="bi bi-question-circle-fill"></i>
+            </div>
+            <div class="metodo" style="
+            --bgcolor: rgba(0, 255, 85, 0.521);
+            font-size: xx-large;
+            color: rgba(0, 0, 0, 0.692);
+            " onclick="showDialog('who')">
+                <i class="bi bi-patch-exclamation-fill"></i>
+            </div>
         </dir>
     </div>
 
-    <a href="" class="metodo cerrados">
-
-    </a>
 
 
     <!-- <script type="py" src="./main.py" config="./pyscript.json"></script>-->
 
 
 
-
-    <style>
-        /* Estilos para la ventana modal */
-        .modal {
-            display: none;
-            /* Por defecto, la ventana modal está oculta */
-            position: fixed;
-            /* Fija la ventana modal en la pantalla */
-            z-index: 1;
-            /* Asegura que la ventana modal esté encima de todo */
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            /* Permite desplazarse si la ventana modal es demasiado grande */
-            background-color: rgba(0, 0, 0, 0.5);
-            /* Fondo oscuro semi-transparente */
-        }
-
-        /* Estilos para el contenido de la ventana modal */
-        .modal-content {
-            background-color: #fefefe;
-            margin: 15% auto;
-            /* Centra vertical y horizontalmente */
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-            max-width: 600px;
-            /* Ancho máximo */
-        }
-
-        /* Estilos para el botón de cierre de la ventana modal */
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .close:hover,
-        .close:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
-        }
-    </style>
-
-
     <div id="cerrados" class="modal">
         <div class="modal-content">
             <span class="close" onclick="hideDialog('cerrados')">&times;</span>
-            <p>Este es el contenido de la ventana modal. Puedes colocar aquí lo que desees mostrar.</p>
+            <h2><span class="textGradient2">Cerrados</span></h2>
+            <br>
+            <p>Los métodos cerrados son aquellos que requieren de un intervalo inicial para encontrar la raíz de una
+                función.</p>
+
+            <div class="links">
+                <a href="Metodos/Iterativos/Cerrados/Biseccion.html" class="link">
+                    <i class="icon bi bi-arrow-right-square-fill"></i>
+                    <h2>Bisección</h2>
+                </a>
+                <a href="" class="link">
+                    <i class="icon bi bi-arrow-right-square-fill"></i>
+                    <h2>Falsa posición</h2>
+                </a>
+
+            </div>
         </div>
     </div>
     <div id="polinomicos" class="modal">
         <div class="modal-content">
             <span class="close" onclick="hideDialog('polinomicos')">&times;</span>
-            <p>Este es el contenido de la ventana modal. Puedes colocar aquí lo que desees mostrar.</p>
-        </div>
+            <h2><span class="textGradient2">Polinomicos</span></h2>
+            <br>
+            <p>Los métodos polinomicos son aquellos que requieren de un polinomio para encontrar la raíz de una
+                función.</p>
 
+            <div class="links">
+                <a href="" class="link">
+                    <i class="icon bi bi-arrow-right-square-fill"></i>
+                    <h2>Muller</h2>
+                </a>
+                <a href="" class="link">
+                    <i class="icon bi bi-arrow-right-square-fill"></i>
+                    <h2>Bairstow</h2>
+                </a>
+                <a href="" class="link">
+                    <i class="icon bi bi-arrow-right-square-fill"></i>
+                    <h2>Horner</h2>
+                </a>
+
+            </div>
+        </div>
     </div>
+    <div id="abiertos" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="hideDialog('abiertos')">&times;</span>
+            <h2><span class="textGradient2">Abiertos</span></h2>
+            <br>
+            <p>Los métodos abiertos son aquellos que no requieren de un intervalo inicial para encontrar la raíz de una
+                función.</p>
+
+            <div class="links">
+                <a href="" class="link">
+                    <i class="icon bi bi-arrow-right-square-fill"></i>
+                    <h2>Newton-Raphson</h2>
+                </a>
+                <a href="" class="link">
+                    <i class="icon bi bi-arrow-right-square-fill"></i>
+                    <h2>Secante</h2>
+                </a>
+                <a href="" class="link">
+                    <i class="icon bi bi-arrow-right-square-fill"></i>
+                    <h2>Punto Fijo</h2>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="Polinimocos12" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="hideDialog('Polinimocos12')">&times;</span>
+            <h2><span class="textGradient2">Polinomicos de 1º y 2º grado</span></h2>
+            <br>
+            <p>Son aquellos que requieren de un polinomio de 1º o 2º grado para
+                encontrar la raíz de una función.</p>
+
+            <div class="links">
+                <a href="" class="link">
+                    <i class="icon bi bi-arrow-right-square-fill"></i>
+                    <h2>Lineal</h2>
+                </a>
+                <a href="" class="link">
+                    <i class="icon bi bi-arrow-right-square-fill"></i>
+                    <h2>Cuadrática</h2>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="Polinimocos3+" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="hideDialog('Polinimocos3+')">&times;</span>
+            <h2><span class="textGradient2">Polinomicos mayor de 3º</span></h2>
+            <br>
+            <p>Son aquellos que requieren de un polinomio mayor de 3º grado para
+                encontrar la raíz de una función.</p>
+
+            <div class="links">
+                <a href="" class="link">
+                    <i class="icon bi bi-arrow-right-square-fill"></i>
+                    <h2>Tartaglia</h2>
+                </a>
+                <a href="" class="link">
+                    <i class="icon bi bi-arrow-right-square-fill"></i>
+                    <h2>Ferrari</h2>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="work" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="hideDialog('work')">&times;</span>
+            <h2><span class="textGradient2">¿Cómo funciona?</span></h2>
+            <br>
+            <p>Para encontrar la raíz de una función, se deben seguir los siguientes pasos:</p>
+            <ol>
+                <li>Seleccionar un método.</li>
+                <li>Ingresar la función.</li>
+                <li>Ingresar el intervalo inicial (en caso de ser necesario).</li>
+                <li>Seleccionar el número de iteraciones.</li>
+                <li>Calcular.</li>
+            </ol>
+        </div>
+    </div>
+    <div id="who" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="hideDialog('who')">&times;</span>
+            <h2><span class="textGradient2">¿Quién lo creo?</span></h2>
+            <br>
+            <p>Este sitio fue creado por estudiantes de la <br>
+                <span class="textGradient4">Universidad Nacional de El Salvador</span>
+
+            </p>
+            <p>Este sitio web fue creado por 
+                <span class="textGradient1">Sión Alberto Rivas Mata</span>
+
+        </div>
+        
 
     <script>
 

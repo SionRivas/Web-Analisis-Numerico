@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Formulario para el metodo de biseccion 
+    <h1>Metodo de Biseccion</h1>
+    <form action="Biseccion.php" method="post">
+        <label for="funcion">Funcion:</label>
+        <input type="text" name="funcion" id="funcion" required>
+        <br>
+        <label for="a">a:</label>
+        <input type="number" name="a" id="a" required>
+        <br>
+        <label for="b">b:</label>
+        <input type="number" name="b" id="b" required>
+        <br>
+        <label for="tolerancia">Tolerancia:</label>
+        <input type="number" name="tolerancia" id="tolerancia" required>
+        <br>
+        <label for="iteraciones">Iteraciones:</label>
+        <input type="number" name="iteraciones" id="iteraciones" required>
+        <br>
+        <input type="submit" value="Calcular">
+    </form>
+    <br>
+    <a href="../../../index.html">Regresar</a>
+-->
+
+<h1>Calculadora Científica</h1>
+<form>
+    <input type="text" id="display" readonly>
+    <br>
+    <button onclick="appendNumber(7)">7</button>
+    <button onclick="appendNumber(8)">8</button>
+    <button onclick="appendNumber(9)">9</button>
+    <button onclick="appendOperator('+')">+</button>
+    <br>
+    <button onclick="appendNumber(4)">4</button>
+    <button onclick="appendNumber(5)">5</button>
+    <button onclick="appendNumber(6)">6</button>
+    <button onclick="appendOperator('-')">-</button>
+    <br>
+    <button onclick="appendNumber(1)">1</button>
+    <button onclick="appendNumber(2)">2</button>
+    <button onclick="appendNumber(3)">3</button>
+    <button onclick="appendOperator('*')">*</button>
+    <br>
+    <button onclick="appendNumber(0)">0</button>
+    <button onclick="appendOperator('.')">.</button>
+    <button onclick="calculate()">=</button>
+    <button onclick="appendOperator('/')">/</button>
+    <br>
+    <button onclick="appendFunction('log')">log</button>
+    <button onclick="appendFunction('exp')">exp</button>
+    <!-- Add more buttons for other functions -->
+</form>
+<script>
+    function appendNumber(number) {
+        document.getElementById('display').value += number;
+    }
+
+    function appendOperator(operator) {
+        document.getElementById('display').value += operator;
+    }
+
+    function appendFunction(func) {
+        document.getElementById('display').value += func + '(';
+    }
+
+    function calculate() {
+        const expression = document.getElementById('display').value;
+        const result = eval(expression);
+        document.getElementById('display').value = result;
+    }
+</script>
+</body>
+</html>
