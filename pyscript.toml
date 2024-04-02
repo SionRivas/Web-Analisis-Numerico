@@ -1,0 +1,3 @@
+packages = ["sympy", "numpy" ]
+[js_modules.main]
+"utilidades.js" = "utilidades"

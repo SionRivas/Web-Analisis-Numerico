@@ -1,5 +1,8 @@
-import arrr
 from pyscript import document
+
+print("-" * 132)
+def imprimir_hola():
+    print("Hola desde utilidades")
 
 
 def translate_english(event):

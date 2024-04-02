@@ -106,9 +106,7 @@ canvas {
   height: 100%;
   margin: 0;
   padding: 0;
-}
-canvas{
-    z-index: -99;
+  z-index: -99;
 }
 .textGradient1 {
     font-family: var(--primary-font);
