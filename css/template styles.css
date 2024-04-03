@@ -181,44 +181,8 @@ p {
     justify-content: center;
     align-items: center;
     border-radius: 1rem;
+    margin: -0.2rem;
 
-}
-
-.mep1 {
-    background: linear-gradient(135deg, #ff1d1d 0%, #501616 100%);
-}
-
-.mep2 {
-    background: linear-gradient(135deg, #123f18 0%, #00e600 100%);
-}
-
-.mep3 {
-    background: linear-gradient(135deg, #fcd600 0%, #3d3c05 100%);
-}
-
-.mep {
-    width: min-content;
-    display: flex;
-    align-items: center;
-    transition: all 0.5s;
-    cursor: pointer;
-    background-clip: text;
-    text-wrap: nowrap;
-    font-size: small !important;
-}
-
-.mep3 {
-    font-size: xx-small !important;
-}
-
-
-.mep:hover {
-    transform: scale(1.1);
-    color: transparent !important;
-}
-
-.mep:hover h2 {
-    color: transparent !important;
 }
 
 .material-symbols-outlined {
@@ -227,4 +191,104 @@ p {
         'wght' 400,
         'GRAD' 0,
         'opsz' 34
+}
+
+.button-yellow{
+    background: linear-gradient(135deg, #ffff62 0%, #ffbb1c 100%);
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+}
+.button-green{
+    background: linear-gradient(135deg, #2dfd5d 0%, #03a429 100%);
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+}
+.button-red{
+    background: linear-gradient(135deg, #ff2353 0%, #5e0014 100%);
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+}
+.button-blue{
+    background: linear-gradient(135deg, #0AD1C8 0%, #005f95 100%);
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+}
+.button-grey{
+    background: linear-gradient(135deg, #b3b3b3 0%, #2b2b2b 100%);
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+}
+.button-orange{
+    background: linear-gradient(135deg, #ffa230 0%, #ff2525 100%);
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+}
+
+.buttonSmall {
+    font-family: var(--primary-font);
+    padding: 0.1rem .5rem;
+    border-radius: 0.3rem;
+    width: min-content;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.5s;
+    text-wrap: nowrap;
+    margin: 0px -0.3rem;
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.16);
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    opacity: 0.9;
+}
+
+.buttonSmall .material-symbols-outlined{
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 15
+}
+
+
+.buttonSmall:hover , .buttonBig:hover{
+    transform: scale(1.1);
+    z-index: 999;
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.296);
+    opacity: 1;
+    
+}
+
+.buttonBig {
+    font-family: var(--primary-font);
+    padding: 0.3rem 0.8rem;
+    border-radius: 0.3rem;
+    width: min-content;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: all 0.5s;
+    text-wrap: nowrap;
+    margin: 0px -0.2rem;
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.16);
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    opacity: 0.9;
+}
+
+.buttonBig .material-symbols-outlined{
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 32
+}
+
+
+@media print {
+    * {
+        text-align: left !important;
+        color: rgb(0, 0, 0) !important;
+        justify-content: start !important;
+        align-items: start !important;
+    }
 }
