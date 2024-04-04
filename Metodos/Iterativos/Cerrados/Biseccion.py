@@ -6,6 +6,7 @@ from pyscript.js_modules import utilidades as utl
 
 print("Biseccion")
 print("model-loaded")
+print("hola desde python")
 utl.CargaComletada()
 
 x = sp.symbols("x")
@@ -34,8 +35,6 @@ def calcular_biseccion(f_x,x1,xu,es):
     utl.resetarTexto()
     tabla_final = []
 
-    texto = "-x + exp(-x)"
-    f_x = sp.sympify(texto)
     """
     x1 = 0.1
     xu = 0.5
@@ -43,7 +42,7 @@ def calcular_biseccion(f_x,x1,xu,es):
 
     #f_x = sp.E**(-x) - x
     utl.agregarTexto("Metodo de la Biseccion")
-    utl.agregarTexto(("Funcion a evaluar: " + texto))
+    utl.agregarTexto(("Funcion a evaluar: " + str(f_x)))
     utl.agregarTexto("Paso #1---------")
 
 
@@ -142,7 +141,7 @@ def calcular_biseccion(f_x,x1,xu,es):
             ea = "----"
 
 
-        tabla_final.append([iteracion,x1,xu,xr,x1_evaluada,xu_evaluada,xr_evaluada,fx1fxr,condicion,ev,ea])
+        tabla_final.append([iteracion,format(x1),format(xu),format(xr),format(x1_evaluada),format(xu_evaluada),format(xr_evaluada),format(fx1fxr),condicion,format(ev),ea])
 
         if fx1fxr == 0:
             break

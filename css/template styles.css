@@ -155,7 +155,17 @@ p {
     gap: 1rem;
 }
 
+.footer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    padding: 1rem 0rem;
+}
+
 .stepbystep {
+    grid-column: span 2;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -165,6 +175,46 @@ p {
     border: .2rem solid rgba(0, 255, 0, 0.103);
     border-radius: 1rem;
     overflow: hidden;
+}
+
+.tablecontainer{
+    border: 0.1rem solid rgba(0, 0, 0, 0.103);
+    padding: 0.5rem;
+    border-radius: 1rem;
+}
+table tr:first-child td{
+    background: linear-gradient(135deg, #4b54db 0%, #0f165a 100%);
+    font-weight: bolder;
+    font-size: large;
+    color: transparent;
+    background-clip: text;
+    position: sticky;
+    border-top: none;
+}
+
+table tr:last-child td{
+    border-bottom: none;
+}
+
+table{
+    border-collapse: collapse;
+    max-width: 50vw;
+    --bordercolor: rgba(0, 0, 0, 0.103);
+    
+}
+
+tr td{
+    padding: 0.1rem 0.1rem;
+    border: 0.1rem solid var(--bordercolor);
+    border-left: 0.1rem solid var(--bordercolor);
+    border-right: 0.1rem solid var(--bordercolor);
+}
+
+table tr td:first-child{
+    border-left: none;
+}
+table tr td:last-child{
+    border-right: none;
 }
 
 .formulario {
@@ -179,7 +229,7 @@ p {
     display: flex;
     gap: 1rem;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     border-radius: 1rem;
     margin: -0.2rem;
 
@@ -193,32 +243,37 @@ p {
         'opsz' 34
 }
 
-.button-yellow{
+.button-yellow {
     background: linear-gradient(135deg, #ffff62 0%, #ffbb1c 100%);
     color: rgb(0, 0, 0);
     font-weight: 600;
 }
-.button-green{
-    background: linear-gradient(135deg, #2dfd5d 0%, #03a429 100%);
+
+.button-green {
+    background: linear-gradient(135deg, #15ee48 0%, #008b21 100%);
     color: rgb(255, 255, 255);
     font-weight: 700;
 }
-.button-red{
+
+.button-red {
     background: linear-gradient(135deg, #ff2353 0%, #5e0014 100%);
     color: rgb(255, 255, 255);
     font-weight: 700;
 }
-.button-blue{
+
+.button-blue {
     background: linear-gradient(135deg, #0AD1C8 0%, #005f95 100%);
     color: rgb(255, 255, 255);
     font-weight: 700;
 }
-.button-grey{
+
+.button-grey {
     background: linear-gradient(135deg, #b3b3b3 0%, #2b2b2b 100%);
     color: rgb(255, 255, 255);
     font-weight: 700;
 }
-.button-orange{
+
+.button-orange {
     background: linear-gradient(135deg, #ffa230 0%, #ff2525 100%);
     color: rgb(255, 255, 255);
     font-weight: 700;
@@ -238,10 +293,10 @@ p {
     display: flex;
     align-items: center;
     gap: 0.3rem;
-    opacity: 0.9;
+    opacity: 0.8;
 }
 
-.buttonSmall .material-symbols-outlined{
+.buttonSmall .material-symbols-outlined {
     font-variation-settings:
         'FILL' 0,
         'wght' 400,
@@ -249,13 +304,13 @@ p {
         'opsz' 15
 }
 
-
-.buttonSmall:hover , .buttonBig:hover{
+.buttonSmall:hover,
+.buttonBig:hover {
     transform: scale(1.1);
     z-index: 999;
     box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.296);
     opacity: 1;
-    
+
 }
 
 .buttonBig {
@@ -275,7 +330,7 @@ p {
     opacity: 0.9;
 }
 
-.buttonBig .material-symbols-outlined{
+.buttonBig .material-symbols-outlined {
     font-variation-settings:
         'FILL' 0,
         'wght' 400,
@@ -290,5 +345,21 @@ p {
         color: rgb(0, 0, 0) !important;
         justify-content: start !important;
         align-items: start !important;
+    }
+
+    canvas {
+        display: none;
+    }
+
+    .main,
+    .result,
+    .footer {
+        display: none;
+    }
+
+    .stepbystep {
+        grid-template-columns: 1fr;
+        border: none;
+        padding: 0;
     }
 }

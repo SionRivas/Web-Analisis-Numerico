@@ -5,6 +5,16 @@ let stepbyStep = document.getElementById("stepbystep");
 export function CargaComletada() {
     const loading = document.getElementById('loader')
     loading.style.display = 'none'
+    
+    const $calcular = document.getElementById('calcular');
+    const $guardar = document.getElementById('guardar');
+    const $borrar = document.getElementById('borrar');
+    const $cargarModelo = document.getElementById('cargarModelo');
+    
+    $calcular.style.display = 'flex';
+    $guardar.style.display = 'flex';
+    $borrar.style.display = 'flex';
+    $cargarModelo.style.display = 'none';
 }
 export function obtenerTexto() {
     return texto
@@ -16,7 +26,7 @@ export function agregarTexto(textoNuevo) {
     texto += "<p>" + textoNuevo + "</p>"
 }
 export function creartabla(arreglo) {
-    let tabla = "<table>"
+    let tabla = '<div class="tablecontainer"><table>'
     arreglo.forEach(row => {
         tabla += "<tr>"
         row.forEach(value => {
@@ -25,7 +35,7 @@ export function creartabla(arreglo) {
         tabla += "</tr>"
 
     })
-    tabla += "</table>"
+    tabla += "</table></div>"
     texto += tabla
 
 }
