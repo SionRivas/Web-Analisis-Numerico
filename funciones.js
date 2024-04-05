@@ -1,0 +1,56 @@
+document.body.innerHTML += `
+<dialog id="loader">
+        <div class="hamster-bg">
+            <div aria-label="Orange and tan hamster running in a metal wheel" role="img" class="wheel-and-hamster">
+                <div class="wheel"></div>
+                <div class="hamster">
+                    <div class="hamster__body">
+                        <div class="hamster__head">
+                            <div class="hamster__ear"></div>
+                            <div class="hamster__eye"></div>
+                            <div class="hamster__nose"></div>
+                        </div>
+                        <div class="hamster__limb hamster__limb--fr"></div>
+                        <div class="hamster__limb hamster__limb--fl"></div>
+                        <div class="hamster__limb hamster__limb--br"></div>
+                        <div class="hamster__limb hamster__limb--bl"></div>
+                        <div class="hamster__tail"></div>
+                    </div>
+                </div>
+                <div class="spoke"></div>
+            </div>
+            <center>
+                <span class="loadingTxt">Cargando...</span>
+            </center>
+        </div>
+    </dialog>
+    `
+function addPyScript() {
+    document.getElementById('loader').style.display = 'flex';
+
+    const scripbase = document.createElement('script');
+    scripbase.type = 'module';
+    scripbase.src = 'https://pyscript.net/releases/2024.3.1/core.js';
+    document.head.appendChild(scripbase);
+
+    const script = document.createElement('script');
+    script.type = 'py';
+    script.src = './Biseccion.py';
+    script.setAttribute('config', '../../../pyscript.toml');
+    document.body.appendChild(script);
+}
+
+function guardarPDF(divId) {
+    var divContent = document.getElementById(divId);
+    var contenidoOriginal = document.body.innerHTML;
+    window.print();
+}
+
+function borrarPasos() {
+    document.getElementById('stepbystep').innerHTML = `<center><p style="opacity: 0.2; font-weight: 700; color: #16167f;">Aqui se mostrará el procedimiento</p></center>`;
+    document.getElementById('result').style.display = 'none';
+}
+
+function mostrarloader() {
+    document.getElementById('loader').style.display = 'flex';
+}

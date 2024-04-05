@@ -18,9 +18,9 @@ def obtener_Datos(event):
     print("Obteniendo Datos")
     f_x_crudo = (document.getElementById("funcion")).value
     f_x = sp.sympify(f_x_crudo)
-    x1_crudo = (document.getElementById("a")).value
+    x1_crudo = (document.getElementById("xi")).value
     x1 = float(x1_crudo)
-    xu_crudo = (document.getElementById("b")).value
+    xu_crudo = (document.getElementById("xu")).value
     xu = float(xu_crudo)
     toleracia_crudo = (document.getElementById("tolerancia")).value
     tolerancia = float(toleracia_crudo)
@@ -33,6 +33,7 @@ def obtener_Datos(event):
 
 def calcular_biseccion(f_x,x1,xu,es):
     utl.resetarTexto()
+    utl.mostrarLoader()
     tabla_final = []
 
     """
@@ -171,3 +172,4 @@ def calcular_biseccion(f_x,x1,xu,es):
     utl.agregarTexto("Con un error de 3 cifras significativas")
 
     utl.mostrarTexto()
+    utl.ocultarLoader()
