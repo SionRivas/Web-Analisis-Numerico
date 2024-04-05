@@ -174,13 +174,13 @@ p {
     background: rgba(255, 255, 255, 0.295);
     border: .2rem solid rgba(0, 255, 0, 0.103);
     border-radius: 1rem;
-    overflow: hidden;
 }
 
 .tablecontainer{
     border: 0.1rem solid rgba(0, 0, 0, 0.103);
     padding: 0.5rem;
     border-radius: 1rem;
+    overflow: scroll;
 }
 table tr:first-child td{
     background: linear-gradient(135deg, #4b54db 0%, #0f165a 100%);
