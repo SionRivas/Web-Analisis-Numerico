@@ -4,6 +4,7 @@ let stepbyStep = document.getElementById("stepbystep");
 
 
 export function CargaComletada() {
+    toastify("Carga completada", 2)
     const loading = document.getElementById('loader')
     loading.style.display = 'none'
     
@@ -38,6 +39,11 @@ export function resetarTexto() {
 export function agregarTexto(textoNuevo) {
     texto += "<p>" + textoNuevo + "</p>"
 }
+
+export function agregarTitulo1(textoNuevo) {
+    texto += '<p class="titulo1">' + textoNuevo + "</p>"
+}
+
 export function creartabla(arreglo) {
     let tabla = '<div class="tablecontainer"><table>'
     arreglo.forEach(row => {
@@ -60,5 +66,6 @@ export function añadirTab() {
 }
 export function mostrarTexto() {
     stepbyStep.innerHTML = texto
+    toastify("Cálculo completado", 2)
 }
 

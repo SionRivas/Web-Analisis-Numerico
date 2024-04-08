@@ -44,7 +44,7 @@ def calcular_biseccion(f_x,x1,xu,es):
     #f_x = sp.E**(-x) - x
     utl.agregarTexto("Metodo de la Biseccion")
     utl.agregarTexto(("Funcion a evaluar: " + str(f_x)))
-    utl.agregarTexto("Paso #1---------")
+    utl.agregarTitulo1("Paso #1---------")
 
 
 
@@ -63,7 +63,7 @@ def calcular_biseccion(f_x,x1,xu,es):
         utl.agregarTexto("La funcion np Cambia de signo")
 
 
-    utl.agregarTexto("Paso #2---------")
+    utl.agregarTitulo1("Paso #2---------")
 
     roots = sp.solve(f_x)
 
@@ -85,7 +85,7 @@ def calcular_biseccion(f_x,x1,xu,es):
 
 
 
-    utl.agregarTexto("Paso #3---------")
+    utl.agregarTitulo1("Paso #3---------")
 
 
     def calcular_xr (x1,xu):
@@ -170,6 +170,8 @@ def calcular_biseccion(f_x,x1,xu,es):
     utl.agregarTexto("con un error de: " + str(ea) + "%")
     utl.agregarTexto("y se a conseguido con: " + str(iteracion) + " iteracion")
     utl.agregarTexto("Con un error de 3 cifras significativas")
+
+
 
     utl.mostrarTexto()
     utl.ocultarLoader()

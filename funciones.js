@@ -25,6 +25,40 @@ document.body.innerHTML += `
         </div>
     </dialog>
     `
+
+let toastify = function (mensaje, type = 1) {
+    color = ""
+    switch (type) {
+        case 1:
+            color = "linear-gradient(to right, #00b09b, #96c93d)"
+            break;
+        case 2:
+            color = "linear-gradient(135deg, #37f965 0%, #0e9740 100%)"
+            break;
+        case 3:
+            color = "linear-gradient(135deg, #11e3ee 0%, #008cdd 100%)"
+            break;
+        case 4:
+            color = "linear-gradient(to right, #ff416c, #ff4b2b)"
+            break;
+    }
+
+
+    Toastify({
+        text: mensaje,
+        duration: 3000,
+        newWindow: true,
+        close: true,
+        gravity: "top", // `top` or `bottom`
+        position: "right", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+            background: color,
+        },
+        onClick: function () { } // Callback after click
+    }).showToast();
+}
+
 function addPyScript() {
     document.getElementById('loader').style.display = 'flex';
 
@@ -41,16 +75,24 @@ function addPyScript() {
 }
 
 function guardarPDF(divId) {
+
+
+    toastify('Guardando PDF...', 3);
     var divContent = document.getElementById(divId);
     var contenidoOriginal = document.body.innerHTML;
     window.print();
 }
 
 function borrarPasos() {
+    toastify('Borrando pasos...', 4);
     document.getElementById('stepbystep').innerHTML = `<center><p style="opacity: 0.2; font-weight: 700; color: #16167f;">Aqui se mostrará el procedimiento</p></center>`;
     document.getElementById('result').style.display = 'none';
 }
 
 function mostrarloader() {
     document.getElementById('loader').style.display = 'flex';
+}
+
+function prueba() {
+    console.log('Hola');
 }
