@@ -69,8 +69,8 @@ function addPyScript() {
 
     const script = document.createElement('script');
     script.type = 'py';
-    script.src = './Biseccion.py';
-    script.setAttribute('config', '../../../pyscript.toml');
+    script.src = './script-python.py';
+    script.setAttribute('config', '../../../../pyscript.toml');
     document.body.appendChild(script);
 }
 
