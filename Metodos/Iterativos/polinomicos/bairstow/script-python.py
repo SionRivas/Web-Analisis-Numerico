@@ -42,6 +42,9 @@ def calcular_bairstow(f_x, r0, s0, error_aceptado):
         grado = polinomio.degree()
         coeficientes = [polinomio.coeff_monomial(x**i) for i in range(grado, -1, -1)]
 
+
+        #El metodo esta espesifico para el realizado en clase no esta generalizado para cualqueir funcion falta generalizarlo
+
         # asiganamos coeficientes de b
         b4 = coeficientes[0]
         b3 = coeficientes[1] + r0 * b4

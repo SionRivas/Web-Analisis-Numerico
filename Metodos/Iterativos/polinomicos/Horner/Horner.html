@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Método Bairstow</title>
+    <title>Método Horner</title>
     <link rel="stylesheet" href="../../../../styles/template styles.css">
     <link rel="stylesheet" href="../../../../styles/loaders.css">
 
@@ -22,8 +22,8 @@
 <body>
     <div>
     </div>
-    <span class="text_hero">Método <span class="textGradient1">Bairstow</span></span>
-    <p>Este metodo se utiliza para encontrar todas las raices de una funcion
+    <span class="text_hero">Método <span class="textGradient1">Horner</span></span>
+    <p>Este metodo se utiliza para encontrar la raiz de una funcion
 
     <div class="content">
         <div id="main" class="main">
@@ -33,15 +33,11 @@
             <div class="formulario">
                 <div class="valor">
                     <label for="funcion">Funcion:</label>
-                    <input type="text" name="funcion" id="funcion" required value="x**4 - 7*x**3 + 13*x**2 + 23*x - 78" style="width: auto;">
+                    <input type="text" name="funcion" id="funcion" required value="1 + 3*x + 5*x**2 + 6*x**3" style="width: auto;">
                 </div>
                 <div class="valor">
-                    <label for="xi">R0:</label>
-                    <input type="number" name="R0" id="R0" required value="1" maxlength="5">
-                </div>
-                <div class="valor">
-                    <label for="xu">S0:</label>
-                    <input type="number" name="S0" id="S0" required value="1">
+                    <label for="X0">X0:</label>
+                    <input type="number" name="X0" id="X0" required value="-0.45" maxlength="5">
                 </div>
                 <div class="valor">
                     <label for="tolerancia">Tolerancia:</label>

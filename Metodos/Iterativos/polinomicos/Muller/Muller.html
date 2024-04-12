@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Método Bairstow</title>
+    <title>Método Muller</title>
     <link rel="stylesheet" href="../../../../styles/template styles.css">
     <link rel="stylesheet" href="../../../../styles/loaders.css">
 
@@ -22,8 +22,8 @@
 <body>
     <div>
     </div>
-    <span class="text_hero">Método <span class="textGradient1">Bairstow</span></span>
-    <p>Este metodo se utiliza para encontrar todas las raices de una funcion
+    <span class="text_hero">Método <span class="textGradient1">Muller</span></span>
+    <p>Este metodo se utiliza para encontrar todas la raiz de una funcion
 
     <div class="content">
         <div id="main" class="main">
@@ -33,15 +33,19 @@
             <div class="formulario">
                 <div class="valor">
                     <label for="funcion">Funcion:</label>
-                    <input type="text" name="funcion" id="funcion" required value="x**4 - 7*x**3 + 13*x**2 + 23*x - 78" style="width: auto;">
+                    <input type="text" name="funcion" id="funcion" required value="x**3-13*x-12" style="width: auto;">
                 </div>
                 <div class="valor">
-                    <label for="xi">R0:</label>
-                    <input type="number" name="R0" id="R0" required value="1" maxlength="5">
+                    <label for="X0">X0:</label>
+                    <input type="number" name="X0" id="X0" required value="4.5" maxlength="5">
                 </div>
                 <div class="valor">
-                    <label for="xu">S0:</label>
-                    <input type="number" name="S0" id="S0" required value="1">
+                    <label for="X1">X1:</label>
+                    <input type="number" name="X1" id="X1" required value="5.5">
+                </div>
+                <div class="valor">
+                    <label for="X2">X2:</label>
+                    <input type="number" name="X2" id="X2" required value="5">
                 </div>
                 <div class="valor">
                     <label for="tolerancia">Tolerancia:</label>
