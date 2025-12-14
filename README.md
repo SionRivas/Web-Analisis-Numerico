@@ -1,5 +1,6 @@
 # 📊 Análisis Numérico - Calculadora de Métodos
 
+![Fecha](https://img.shields.io/badge/Fecha-Marzo%202024-cian)
 ![Estado](https://img.shields.io/badge/Estado-Proyecto%20de%20Aprendizaje-blue)
 ![Tecnologías](https://img.shields.io/badge/Stack-HTML%20%7C%20CSS%20%7C%20JavaScript-orange)
 
@@ -74,6 +75,7 @@ Web-Analisis-Numerico/
 ## 📚 Reflexión
 
 > Este proyecto representa mis primeros pasos en el mundo del desarrollo web y, aunque ahora puedo ver claramente en que puntos se puede mejorar aun así los conservo porque me da alegría el poder notar como mis habilidades han ido evolucionando cada vez más con el tiempo (En esta época agregaba fondos en movimiento en todos lados xd). Lo mantengo público como recordatorio de que todos empezamos desde algún lugar.
+> Ni siquiera era necesario hacerle interfaz a la aplicación que nos habían dejado de hacer, pero me gusta complicarme jaja
 
 **Áreas que mejoraría hoy:**
 - Separación de responsabilidades (HTML, CSS, JS)
