@@ -89,7 +89,8 @@ Web-Analisis-Numerico/
 
 **Sión Alberto Rivas Mata**  
 **Carlos Fernando Peña Belloso**
-Estudiante - Universidad Nacional de El Salvador
+
+Estudiantes - Universidad Nacional de El Salvador
 
 ---
 
